@@ -7,6 +7,42 @@ app.get('/', (req, res) => {
     res.send('Server is ready');
 });
 
+app.get('/api/products', (req, res) => {
+    const products = [
+        {
+            "id": 1,
+            "name": "Laptop",
+            "price": 1000,
+            "image": "https://picsum.photos/200/300"
+        },
+        {
+            "id": 2,
+            "name": "Mouse",
+            "price": 40,
+            "image": "https://picsum.photos/200/300"
+        },
+        {
+            "id": 3,
+            "name": "Keyboard",
+            "price": 100,
+            "image": "https://picsum.photos/200/300"
+        },
+        {
+            "id": 4,
+            "name": "Monitor",
+            "price": 200,
+            "image": "https://picsum.photos/200/300"
+        },
+        {
+            "id": 5,
+            "name": "Printer",
+            "price": 200,
+            "image": "https://picsum.photos/200/300"
+        }
+    ]
+    res.send(products);
+});
+
 
 app.get('/api/jokes', (req, res) => {
     const jokes = [
